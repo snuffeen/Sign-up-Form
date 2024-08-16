@@ -1,5 +1,32 @@
 @import '/modern-normalize.css';
 
+
+body {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
 .hero {
     background-image: url('./jonathan-van-den-broek-II1P6vSXd5o-unsplash.jpg');
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+.credit {
+    color: white;
 }
