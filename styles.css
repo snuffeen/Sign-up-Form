@@ -1,22 +1,76 @@
 @import '/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inconsolata:wght@200..900&display=swap');
 
+:root {
+    --primary-font: Inconsolata, Helvetica, sans-serif;
+    --secondary-font: Dancing Script, Arial, sans-serif;
+}
 
 body {
     display: grid;
     grid-template-columns: 40% 60%;
+    font-size: 24px;
 }
 
 .hero {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     background-image: url('./jonathan-van-den-broek-II1P6vSXd5o-unsplash.jpg');
     background-color: #cccccc;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    color: white;
+}
+
+.title-background {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.credit {
+    align-self: flex-end;
+    justify-content: center;
 }
 
 .form-container {
     display: grid;
     grid-template-rows: 25% 75%;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    align-self: flex-end;
+    padding-bottom: 10%;
+    font-family: var(--secondary-font);
+    font-style: italic;
+}
+
+label {
+    font-family: var(--primary-font);
+}
+
+input {
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-family: var(--primary-font);
 }
 
 input:valid {
@@ -25,8 +79,4 @@ input:valid {
 
 input:invalid {
     border-color: red;
-}
-
-.credit {
-    color: white;
 }
