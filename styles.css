@@ -4,12 +4,27 @@
 :root {
     --primary-font: Inconsolata, Helvetica, sans-serif;
     --secondary-font: Dancing Script, Arial, sans-serif;
+    --primary-color: rgb(2, 2, 65);
+    --separation-padding: 10%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a:visited {
+    color: white;
 }
 
 body {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 20% 20% 40% 20%;
     font-size: 24px;
+}
+
+.sidebar {
+    background-color: lightblue;
 }
 
 .hero {
@@ -20,40 +35,39 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    color: white;
 }
 
 .title-background {
+    background-color: white;
+    opacity: 0.5;
     display: flex;
     flex-direction: row;
     align-self: center;
     justify-content: center;
     gap: 8px;
+    height: 10vh;
+}
+
+.logo {
+    align-self: center;
+}
+.title {
+    align-self: center;
+    font-size: 3rem;
 }
 
 .credit {
     align-self: flex-end;
-    justify-content: center;
+    justify-self: center;
+    font-size: 12px;
+    color: white;
+    opacity: 0.7;
 }
 
 .form-container {
     display: grid;
-    grid-template-rows: 25% 75%;
-}
-
-fieldset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: 30% 70%;
+    background-color: white;
 }
 
 .description {
@@ -61,6 +75,24 @@ fieldset {
     padding-bottom: 10%;
     font-family: var(--secondary-font);
     font-style: italic;
+    padding-left: var(--separation-padding);
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 8px;
+    padding-left: var(--separation-padding);
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
 
 label {
@@ -68,7 +100,7 @@ label {
 }
 
 input {
-    border: 1px solid grey;
+    border: 1px solid #E5E7EB;
     border-radius: 4px;
     font-family: var(--primary-font);
 }
@@ -79,4 +111,30 @@ input:valid {
 
 input:invalid {
     border-color: red;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.confirm {
+    padding-left: var(--separation-padding);
+}
+
+.confirm a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+button {
+    width: 30%;
+    padding: 1%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
 }
